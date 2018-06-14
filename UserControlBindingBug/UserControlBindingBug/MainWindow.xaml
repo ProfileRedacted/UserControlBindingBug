@@ -1,0 +1,16 @@
+﻿<Window x:Class="UserControlBindingBug.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserControlBindingBug"
+        mc:Ignorable="d"
+        Title="UserControlBindingBug" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainWindow}">
+    <StackPanel>
+        <DataGrid
+            ItemsSource="{Binding Packets}"
+            IsSynchronizedWithCurrentItem="True"
+            AutoGenerateColumns="True"
+            AutoGeneratingColumn="OnAutoGeneratingColumn"/>
+    </StackPanel>
+</Window>
